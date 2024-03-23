@@ -16,4 +16,4 @@ In particular, I'm working with an energy meter that uses the NB-IoT wireless co
 - PostgreSQL (Persistence)
 
 ### Pipeline
-<img src="/images/pipeline.png">
+<img src="pipeline.png">
