@@ -28,7 +28,7 @@ if __name__ == '__main__':
           s.close()
           print(f'Data sent to Nifi\nData: {data}')
       except Exception as e:
-          print("Errore durante l'invio dei dati a NiFi:", e)
+          print(f'Error: {e} occured while sending data')
   
   while True:
       try:
