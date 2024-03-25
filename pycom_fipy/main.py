@@ -26,17 +26,17 @@ if __name__ == '__main__':
           s.connect((SERVER_IP, SERVER_PORT))
           s.sendall(data.encode('utf-8'))
           s.close()
-          print("Dati inviati con successo a NiFi:", data)
+          print(f'Data sent to Nifi\nData: {data}')
       except Exception as e:
           print("Errore durante l'invio dei dati a NiFi:", e)
   
   while True:
       try:
           energy_data = EnergyConsumption()
-          json_data = ujson.dumps(energy_data)
-          sendToNifi(json_data)
+          data = ujson.dumps(energy_data)
+          sendToNifi(data)
           time.sleep(60)
       except Exception as e:
-          print("Errore durante l'invio dei dati:", e)
+          print(f'An error occured while sending the data to the server: {e}')
           
           machine.reset()
